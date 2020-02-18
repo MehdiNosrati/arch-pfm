@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="io.xdev.x_pfm.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_fragment_to_transactionFragment"
+            app:destination="@id/transaction_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/still"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/still"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/home_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_preference_fragment"
+            app:destination="@id/tag_fragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/still"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/still"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/home_fragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/transaction_fragment"
+        android:name="io.xdev.x_pfm.ui.TransactionFragment"
+        android:label="fragment_transaction"
+        tools:layout="@layout/fragment_transaction">
+        <action
+            android:id="@+id/action_transactionFragment_to_home_fragment"
+            app:destination="@id/home_fragment"
+            app:enterAnim="@anim/still"
+            app:exitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/home_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/tag_fragment"
+        android:name="io.xdev.x_pfm.PreferencesFragment"
+        android:label="fragment_tag"
+        tools:layout="@layout/fragment_preference" />
+</navigation>

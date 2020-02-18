@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">x-pfm</string>
+    <string name="hello_world">it works</string>
+    <string name="value_hint">How much?</string>
+    <string name="income">Income</string>
+    <string name="submit">submit</string>
+    <string name="empty_transaction_toast">No empty transactions!</string>
+    <string name="submit_confirm_toast">Submitted</string>
+    <string name="expense">Expense</string>
+    <string name="balance">Balance</string>
+    <string name="title_hint">For what?</string>
+</resources>
